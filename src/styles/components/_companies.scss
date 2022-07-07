@@ -1,0 +1,33 @@
+.companiesContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 155px auto 135px auto;
+    h6{
+        font-size: $desc;
+        color:$textGray;
+        font-weight: 200;
+    }
+    .companies{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: $bgGray;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 16px;
+        img{
+            mix-blend-mode: multiply;
+            margin: 0 auto;
+        }
+    }
+}
+
+@include breakpoint(1024px){
+    .companiesContainer{
+        margin-top: 100px;
+    }
+}

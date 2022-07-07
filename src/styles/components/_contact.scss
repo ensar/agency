@@ -1,0 +1,58 @@
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 75px;
+    background-color: $bgGray;
+    border-radius: 20px;
+    margin: 135px 0;
+    img{
+        mix-blend-mode: multiply;
+    }
+    &-info{
+        width: 360px;
+        h2{
+            font-size: $subtitle;
+            color:$text;
+        }
+        p{
+            font-size: $desc;
+            color:$text;
+            margin-top: 16px;
+        }
+    }
+}
+
+@include breakpoint(1200px){
+    .contact{
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        &-info{
+           
+          
+            h2{
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@include breakpoint(1024px){
+    .contact{
+        padding: 48px 35px;
+        justify-content: center;
+        img{
+            display: none;
+        }
+        &-info{
+           
+            text-align: center;
+            h2{
+                font-size: 32px;
+            }
+        }
+    }
+
+}

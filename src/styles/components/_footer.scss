@@ -1,0 +1,48 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: $bgGray;
+    padding: 105px 183px 0 183px;
+    &-lists{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        ul{
+            width: 140px;
+            margin-top: 20px;
+        }
+        span{
+            font-size: $desc;
+            color:$text;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 40px;
+        }
+        li{
+            list-style: none;
+            color:$text;
+            font-size: $desc;
+            margin-bottom: 24px;
+        }
+    }
+    h6{
+        margin-top: 110px;
+        text-align: center;
+    }
+}
+
+@include breakpoint(1024px){
+    .footer{
+        padding: 105px 50px 0 50px
+    }
+}
+@include breakpoint(480px){
+    .footer{
+        &-list{
+            ul{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

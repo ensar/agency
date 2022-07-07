@@ -1,0 +1,53 @@
+@import "system/color.scss";
+@import "system/font.scss";
+@import "system/typography";
+@import "utils/breakpoint";
+@import "components/button";
+@import "components/navbar";
+@import "components/hero";
+@import "components/companies";
+@import "components/branding";
+@import "components/custom";
+@import "components/testimonials";
+@import "components/contact";
+@import "components/footer";
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container{
+    width:100%;
+    overflow: hidden;
+}
+main{
+    width: 100%;
+    padding: 46px 188px;
+}
+
+
+
+@include breakpoint(1024px){
+    main{
+        padding: 46px 80px;
+    }
+}
+
+@include breakpoint(480px){
+    main{
+        padding: 46px 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+.branding{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 135px;
+   
+    &-img{
+        width: 450px;
+        height: 450px;
+    }
+    &-info{
+        width: 435px;
+        h2{
+            font-size: $subtitle;
+            color:$text;
+            margin-bottom: 25px;
+        }
+        p{
+            font-size: $desc;
+            color: $text;
+            margin-bottom: 45px;
+        }
+        button{
+            width: 30px;
+            height: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: 200ms;
+            &:hover{
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+@include breakpoint(1024px){
+    .branding{
+        &-img{
+            width: 400px;
+            height: 400px;
+        }
+        &-info{
+            h2{
+                font-size: 30px;
+            }
+        }
+    }
+}
+@include breakpoint(768px){
+    .branding{
+        flex-direction: column-reverse;
+        &-info{
+            text-align: center;
+            button{
+                transform: rotate(90deg);
+                &:hover{
+                    transform: rotate(90deg) translateX(10px);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(480px){
+    .branding{
+        &-img{
+            width: 300px;
+            height: 300px;
+        }
+        &-info{
+            width: 300px;
+            h2{
+                font-size: 25px;
+            }
+        }
+    }
+}

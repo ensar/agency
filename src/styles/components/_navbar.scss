@@ -1,0 +1,89 @@
+.navbarContainer{
+    width:calc(100% - 376px);
+    height:28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    .logo{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    ul{
+        display: flex;
+      
+        li{
+            list-style: none;
+            margin-left: 44px;
+            a{
+                text-decoration: none;
+                color:$text;
+                font-size: $regular;
+            }
+        }
+    }
+    .menuIcon{
+        display: none;
+       cursor: pointer;
+    }
+    .close{
+        float: right;
+        margin:40px 40px 0 0;
+        cursor: pointer;
+        display: none;
+       img{
+        width: 30px;
+        height: 30px;
+       }
+    }
+}
+
+@include breakpoint(1024px){
+    .navbarContainer{
+        width: calc(100% - 160px);
+    }
+}
+
+@include breakpoint(768px){
+    .navbarContainer{
+        .menu{
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index: 2;
+            width: 100vw;
+            height: 100vh;
+            background-color: $bg;
+            display: none;
+            ul{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                li{
+                    font-size: $title;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .menu.active{
+            display: block;
+        }
+        .menu.active .close{
+            display: block;
+        }
+        .menuIcon{
+            display: block;
+        }
+    }
+}
+
+@include breakpoint(480px){
+    .navbarContainer{
+        width: calc(100% - 20px);
+    }
+}
