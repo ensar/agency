@@ -19,9 +19,13 @@ const Custom = () => {
         src={custom}
         alt='custom'
         className='custom-img'
-        initial={{ opacity: 0, translateX: "200px" }}
+        initial={{
+          opacity: 0,
+          translateX: "100px",
+          transitionDuration: "1.2s",
+        }}
         whileInView={{ opacity: 1, translateX: "0px" }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true, margin: "-150px" }}
       />
     </div>
   );

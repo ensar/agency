@@ -9,9 +9,13 @@ const Branding = () => {
         src={branding}
         alt='branding'
         className='branding-img'
-        initial={{ opacity: 0, translateX: "-200px" }}
+        initial={{
+          opacity: 0,
+          translateX: "-100px",
+          transitionDuration: "1.2s",
+        }}
         whileInView={{ opacity: 1, translateX: "0px" }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true, margin: "-150px" }}
       />
       <div className='branding-info'>
         <h2>Branding & Design system</h2>
